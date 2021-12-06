@@ -3,7 +3,8 @@ mongoose.connect('mongodb://localhost/test');
 const schema = {
     name: String,
     age:Number,
-    health:String
+    health:String,
+    hobby:String
   };
   const mydata = mongoose.model('cats',schema);
   mydata.find({name:"zhang3"},(err,data)=>{console.log(data[0]._doc.name)})
